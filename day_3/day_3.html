@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>React day 3</title>
+        <!-- Style link -->
+        <link rel="stylesheet" href="day_3.css">
+        <!-- Script tags including React -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="text/babel">
+            class App extends React.Component {
+                render() {
+                    return (
+                        <div id="component">
+                            <h1>Hello LinkedIn</h1>
+
+                            <div className="forparaphs">
+                                <p>3 jours se sont écroulés depuis que nous avons lancé le défi des trentes jours de React</p>
+                                <p>ES6 qui signifie ECMAScript n'est pas pris en charge par tous les navigateurs, il est préférable de transpiler notre JavaScript ES6 en JavaScript ES5.</p>
+                                <p>Babel est une bibliothèque pour transpiler ES6 vers ES5, que nous mettons à l'intérieur de body dans le corps de script. Cette balise script a un type text/babel.</p>
+                                <p>ReactDOM.render() est la fonction qui se charge du rendu dans le DOM. Le premier argument de ReactDOM.render() est ce qu'il faut rendre et le second est où le rendre.</p>
+                            </div>
+
+                            <div className="forparaphs">
+                                <p>Nos composants React sont écrits précédés du mot class et étende sur le fonction React.Component</p>
+                                <p>Tous les composants React nécessitent au moins une fonction render().Cette fonction render() est censée renvoyer un DOM virtuel qui
+                                représentate les éléments DOM du navigateur.</p>
+                                <p>Nous pouvons rendre notre application React en utilisant notre component comme s'il s'agissait d'un type de composant DOM intégré (h1 et div).</p>
+                            </div>
+
+                            <br />
+                            <br />
+                            <h1>En avant pour le défi du jour 4</h1>
+                        </div>
+                    )
+                }
+            }
+            var mountComponent = document.querySelector("#app");
+            ReactDOM.render(<App />, mountComponent);
+        </script>
+    </body>
+</html>

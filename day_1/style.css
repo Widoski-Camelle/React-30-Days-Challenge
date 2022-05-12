@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(215, 215, 207);
+}
+
+#content {
+    background-color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    /* box-shadow: 10px 10px 10px 10px #000; */
+}
+
+#title h1 {
+    color: rgb(0, 96, 96);
+}

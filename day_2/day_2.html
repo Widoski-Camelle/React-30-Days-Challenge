@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>React day 2</title>
+        <!-- Style -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Script tags including React -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            class HelloWorld extends React.Component {
+                render() {
+                    return (
+                        React.createElement("div", null,
+                            // React.createElement("img", {src: "profile.jpg", alt: "Profile photo"}),
+                            React.createElement("h1", null, "Welcome back Ari"))
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>

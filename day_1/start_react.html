@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Start React</title>
+        <!-- Style -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Script tags including React -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            ReactDOM.render(
+                <div id="content">
+                    <div id="title">
+                        <h1>Bonjour cher réseau, </h1>
+                    </div>
+                    <p>Aujourd'hui est le premier jour du challenge des trentes jours de React.</p>
+                    <p>La notion apprise aujourd'hui est le ReactDOM.render()</p>
+                </div>,
+                document.querySelector('#app')
+            );
+        </script>
+    </body>
+</html>
