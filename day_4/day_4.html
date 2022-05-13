@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Day 4</title>
+    <!-- Script tags including React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/gh/fullstackreact/30-days-of-react@master/day-04/public/Timeline.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" href="day_4.css">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="demo">
+        <div id="app"></div>
+    </div>
+    <script type="text/babel">
+        // Parent Component
+        class App extends React.Component {
+            render() {
+                return (
+                    <div className="notificationsFrame">
+                        <div className="panel">
+                            {/* content goes here */}
+                            <Header />
+                            <Content />
+                        </div>
+                    </div>
+                );
+            }
+        }
+        // 1st Child Component
+        class Header extends React.Component {
+            render() {
+                return (
+                    <div className="header">
+                        <div className="menuIcon">
+                            <div className="dashTop"></div>
+                            <div className="dashBottom"></div>
+                            <div className="circle"></div>
+                        </div>
+                        <span className="title">Timeline</span>
+                        <input type="text" className="searchInput" placeholder="Search..." />
+                        <div className="fa fa-search searchIcon"></div>
+                    </div>
+                );
+            }
+        }
+        // 2nd Child Component
+        class Content extends React.Component {
+            render() {
+                return (
+                    <div className="content">
+                        <div className="line"></div>
+                            {/* Timeline item */}
+                            <div className="item">
+                                <div className="avatar">
+                                <img alt="Doug" src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+                                Doug
+                            </div>
+                            <span className="time">An hour ago</span>
+                            <p>Ate lunch</p>
+                            <div className="commentCount">2</div>
+                        </div>
+                        {/* ... */}
+
+                        <div className="line"></div>
+                            {/* Timeline item */}
+                            <div className="item">
+                                <div className="avatar">
+                                <img alt="Doug" src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+                                Doug
+                            </div>
+                            <span className="time">An hour ago</span>
+                            <p>Ate lunch</p>
+                            <div className="commentCount">2</div>
+                        </div>
+                        {/* ... */}
+
+                        <div className="line"></div>
+                            {/* Timeline item */}
+                            <div className="item">
+                                <div className="avatar">
+                                <img alt="Doug" src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+                                Doug
+                            </div>
+                            <span className="time">An hour ago</span>
+                            <p>Ate lunch</p>
+                            <div className="commentCount">2</div>
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        var compone = document.querySelector("#app");
+        ReactDOM.render(<App />, compone);
+    </script>
+</body>
+</html>
